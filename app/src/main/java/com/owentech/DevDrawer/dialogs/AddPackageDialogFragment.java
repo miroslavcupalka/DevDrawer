@@ -35,16 +35,16 @@ import java.util.List;
 import java.util.Set;
 
 import butterknife.ButterKnife;
-import butterknife.InjectView;
+import butterknife.BindView;
 
 /**
  * Created by tonyowen on 09/07/2014.
  */
 public class AddPackageDialogFragment extends DialogFragment implements TextWatcher {
 
-    @InjectView(R.id.addPackage)
+    @BindView(R.id.addPackage)
     AutoCompleteTextView addPackage;
-    @InjectView(R.id.addButton)
+    @BindView(R.id.addButton)
     Button addButton;
 
     private PartialMatchAdapter partialMatchAdapter;
@@ -80,7 +80,7 @@ public class AddPackageDialogFragment extends DialogFragment implements TextWatc
         getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
 
         View view = inflater.inflate(R.layout.add_package_dialog_fragment, container);
-        ButterKnife.inject(this, view);
+       ButterKnife.bind(this, view);
 
         widgetId = getArguments().getInt(WIDGET_ID);
 

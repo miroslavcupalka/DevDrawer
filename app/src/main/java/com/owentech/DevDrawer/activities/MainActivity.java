@@ -34,12 +34,12 @@ import java.util.Set;
 import java.util.logging.Filter;
 
 import butterknife.ButterKnife;
-import butterknife.InjectView;
+import butterknife.BindView;
 
 
 public class MainActivity extends AppCompatActivity implements TextWatcher {
 
-    @InjectView(R.id.main_viewpager) ViewPager viewPager;
+    @BindView(R.id.main_viewpager) ViewPager viewPager;
     WidgetsFragment widgetsFragment;
     NotificationsFragment notificationsFragment;
     ShortcutFragment shortcutFragment;
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
     public void onCreate(Bundle state) {
         super.onCreate(state);
         setContentView(R.layout.activity_main);
-        ButterKnife.inject(this);
+       ButterKnife.bind(this);
 
         mAppWidgetIds = AppWidgetUtil.findAppWidgetIds(this);
 

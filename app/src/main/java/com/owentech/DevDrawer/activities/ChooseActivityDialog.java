@@ -17,8 +17,8 @@ import com.owentech.DevDrawer.adapters.ActivityListAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 
 /**
  * Created with IntelliJ IDEA.
@@ -29,15 +29,17 @@ import butterknife.InjectView;
  */
 public class ChooseActivityDialog extends Activity implements ListView.OnItemClickListener {
 
-    @InjectView(R.id.listView) ListView listView;
     String packageName;
     List<String> activitiesList;
+    @BindView(R.id.listView)
+    ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choice);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
+
         packageName = getIntent().getStringExtra("packageName");
 
         try {

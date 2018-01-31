@@ -65,7 +65,7 @@ public class DDWidgetProvider extends AppWidgetProvider {
             name = "DevDrawer";
         }
 
-        if (true){
+        if (true) {
             widget.setViewVisibility(R.id.lightHeader, View.VISIBLE);
             widget.setViewVisibility(R.id.darkHeader, View.INVISIBLE);
             widget.setViewVisibility(R.id.lightBackground, View.VISIBLE);
@@ -74,8 +74,7 @@ public class DDWidgetProvider extends AppWidgetProvider {
 //            widget.setImageViewBitmap(R.id.refresh, drawableToBitmap(AppWidgetUtil.getColoredDrawable(context, R.drawable.refresh, context.getResources().getColor(android.R.color.white))));
 //            widget.setTextColor(R.id.widget_layout_titletv, context.getResources().getColor(android.R.color.black));
 //            widget.setImageViewBitmap(R.id.refresh, drawableToBitmap(AppWidgetUtil.getColoredDrawable(context, R.drawable.refresh, context.getResources().getColor(android.R.color.black))));
-        }
-        else{
+        } else {
             widget.setViewVisibility(R.id.lightHeader, View.INVISIBLE);
             widget.setViewVisibility(R.id.darkHeader, View.VISIBLE);
             widget.setViewVisibility(R.id.lightBackground, View.INVISIBLE);
@@ -122,7 +121,7 @@ public class DDWidgetProvider extends AppWidgetProvider {
         }
     }
 
-    public static Bitmap drawableToBitmap (Drawable drawable) {
+    public static Bitmap drawableToBitmap(Drawable drawable) {
 
         int width = drawable.getIntrinsicWidth();
         width = width > 0 ? width : 1;

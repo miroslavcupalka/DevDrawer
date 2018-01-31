@@ -11,7 +11,7 @@ import com.owentech.DevDrawer.R;
 import com.owentech.DevDrawer.utils.AppConstants;
 
 import butterknife.ButterKnife;
-import butterknife.InjectView;
+import butterknife.BindView;
 
 /**
  * Created with IntelliJ IDEA.
@@ -22,8 +22,8 @@ import butterknife.InjectView;
  */
 public class EditDialog extends Activity {
 
-    @InjectView(R.id.editDialogEditText) EditText editText;
-    @InjectView(R.id.changeButton) Button changeButton;
+    @BindView(R.id.editDialogEditText) EditText editText;
+    @BindView(R.id.changeButton) Button changeButton;
 
     private String originalText;
     private String id;
@@ -32,7 +32,7 @@ public class EditDialog extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.edit_dialog);
-        ButterKnife.inject(this);
+       ButterKnife.bind(this);
         Bundle bundle = getIntent().getExtras();
         originalText = bundle.getString("text");
         id = bundle.getString("id");

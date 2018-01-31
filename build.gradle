@@ -1,10 +1,14 @@
 buildscript {
     repositories {
         mavenCentral()
+        jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.2'
+        classpath 'com.android.tools.build:gradle:3.0.1'
         classpath 'com.squareup.sqldelight:gradle-plugin:0.5.1'
-        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4'
     }
 }

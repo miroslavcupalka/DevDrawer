@@ -19,14 +19,14 @@ import com.owentech.DevDrawer.utils.OttoManager;
 import com.owentech.DevDrawer.utils.Database;
 
 import butterknife.ButterKnife;
-import butterknife.InjectView;
+import butterknife.BindView;
 
 /**
  * Created by tonyowen on 10/07/2014.
  */
 public class ChooseWidgetDialogFragment extends DialogFragment implements AdapterView.OnItemClickListener {
 
-    @InjectView(R.id.listView) ListView listView;
+    @BindView(R.id.listView) ListView listView;
 
     private PartialMatchAdapter partialMatchAdapter;
     final private static String EDIT = "edit";
@@ -54,7 +54,7 @@ public class ChooseWidgetDialogFragment extends DialogFragment implements Adapte
         getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
 
         View view = inflater.inflate(R.layout.choose_widget_dialog_fragment, container);
-        ButterKnife.inject(this, view);
+       ButterKnife.bind(this, view);
 
         widgetId = getArguments().getInt(WIDGET_ID);
         widgetNames = Database.getInstance(getActivity()).getWidgetNames(getActivity());

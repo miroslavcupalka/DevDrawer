@@ -42,19 +42,19 @@ import com.shamanland.fab.ShowHideOnScroll;
 import com.squareup.otto.Subscribe;
 
 import butterknife.ButterKnife;
-import butterknife.InjectView;
+import butterknife.BindView;
 
 /**
  * Created by tonyowen on 09/07/2014.
  */
 public class WidgetsFragment extends Fragment implements View.OnClickListener, View.OnLongClickListener {
 
-    @InjectView(R.id.selectionLayout) RelativeLayout selectionLayout;
-    @InjectView(R.id.selectionShadow) View selectionShadow;
-    @InjectView(R.id.recyclerView) RecyclerView recyclerView;
-    @InjectView(R.id.noWidgets) CardView noWidgets;
-    @InjectView(R.id.currentWidgetName) TextView currentWidgetName;
-    @InjectView(R.id.fab) ImageButton fab;
+    @BindView(R.id.selectionLayout) RelativeLayout selectionLayout;
+    @BindView(R.id.selectionShadow) View selectionShadow;
+    @BindView(R.id.recyclerView) RecyclerView recyclerView;
+    @BindView(R.id.noWidgets) CardView noWidgets;
+    @BindView(R.id.currentWidgetName) TextView currentWidgetName;
+    @BindView(R.id.fab) ImageButton fab;
 
     private int[] mAppWidgetIds;
     private FilterListAdapter filterListAdapter;
@@ -63,7 +63,7 @@ public class WidgetsFragment extends Fragment implements View.OnClickListener, V
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.widgets_fragment, container, false);
-        ButterKnife.inject(this, view);
+       ButterKnife.bind(this, view);
         setHasOptionsMenu(true);
         selectionLayout.setOnClickListener(this);
         selectionLayout.setOnLongClickListener(this);

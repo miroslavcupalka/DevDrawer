@@ -19,15 +19,15 @@ import com.owentech.DevDrawer.utils.AppConstants;
 import com.owentech.DevDrawer.utils.Database;
 
 import butterknife.ButterKnife;
-import butterknife.InjectView;
+import butterknife.BindView;
 
 /**
  * Created by tonyowen on 15/07/2014.
  */
 public class ChangeWidgetNameDialogFragment extends DialogFragment implements View.OnClickListener {
 
-    @InjectView(R.id.editText) EditText editText;
-    @InjectView(R.id.ok) Button ok;
+    @BindView(R.id.editText) EditText editText;
+    @BindView(R.id.ok) Button ok;
 
     private PartialMatchAdapter partialMatchAdapter;
     final private static String EDIT = "edit";
@@ -61,7 +61,7 @@ public class ChangeWidgetNameDialogFragment extends DialogFragment implements Vi
         getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
 
         View view = inflater.inflate(R.layout.rename_widget_dialog_fragment, container);
-        ButterKnife.inject(this, view);
+       ButterKnife.bind(this, view);
         ok.setOnClickListener(this);
 
         widgetId = getArguments().getInt(WIDGET_ID);

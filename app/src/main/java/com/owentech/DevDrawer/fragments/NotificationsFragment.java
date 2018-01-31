@@ -31,22 +31,22 @@ import com.shamanland.fab.ShowHideOnScroll;
 import com.squareup.otto.Subscribe;
 
 import butterknife.ButterKnife;
-import butterknife.InjectView;
+import butterknife.BindView;
 
 /**
  * Created by tonyowen on 09/07/2014.
  */
 public class NotificationsFragment extends Fragment {
 
-    @InjectView(R.id.recyclerView) RecyclerView recyclerView;
-    @InjectView(R.id.fab) ImageButton fab;
+    @BindView(R.id.recyclerView) RecyclerView recyclerView;
+    @BindView(R.id.fab) ImageButton fab;
     private NotificationFilterAdapter notificationFilterAdapter;
     float originalFabY;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.notifications_fragment, container, false);
-        ButterKnife.inject(this, view);
+       ButterKnife.bind(this, view);
         setHasOptionsMenu(true);
 
         //Outline

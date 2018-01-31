@@ -9,11 +9,11 @@ import com.owentech.DevDrawer.R;
 import com.owentech.DevDrawer.adapters.LegacyListAdapter;
 
 import butterknife.ButterKnife;
-import butterknife.InjectView;
+import butterknife.BindView;
 
 public class LegacyDialog extends Activity {
 
-    @InjectView(R.id.legacyListView) ListView listView;
+    @BindView(R.id.legacyListView) ListView listView;
     LegacyListAdapter listAdapter;
 
     @Override
@@ -21,7 +21,7 @@ public class LegacyDialog extends Activity {
         getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.legacy_dialog);
-        ButterKnife.inject(this);
+       ButterKnife.bind(this);
         listAdapter = new LegacyListAdapter(this);
         listView.setAdapter(listAdapter);
     }
