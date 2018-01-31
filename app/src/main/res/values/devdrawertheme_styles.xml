@@ -3,12 +3,12 @@
 <!-- Generated with http://android-holo-colors.com -->
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <style name="Theme.DevDrawer" parent="Theme.AppCompat.Light">
+    <style name="Theme.DevDrawer" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">#2196F3</item>
         <item name="colorPrimaryDark">#1976D2</item>
         <item name="colorAccent">#536DFE</item>
-        <item name="android:textColorPrimary">#FFFFFF</item>
-        <item name="colorControlNormal">#FFFFFF</item>
+        <item name="android:textColorPrimary">#232323</item>
+        <item name="colorControlNormal">#3d3d3d</item>
 
     </style>
 
